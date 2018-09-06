@@ -6,8 +6,8 @@ from collections import deque
 import platform
 from agents import Agent
 
+# determine OS
 platform = platform.system()
-
 if platform == "Darwin":
     env_path = "Banana_Mac/Banana.app"
 elif platform == "Windows":
@@ -16,7 +16,7 @@ else:
     print("Unknown OS. Falling back to Windows environment binaries.")
     env_path = "Banana_Windows_x86_64/Banana.exe"
 
-
+# create Unity environment
 env = UnityEnvironment(file_name=env_path)
 
 # get the default brain

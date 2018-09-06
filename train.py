@@ -5,9 +5,21 @@ import torch
 import numpy as np
 from collections import deque
 import matplotlib.pyplot as plt
+import platform
 from agents import Agent
 
-env = UnityEnvironment(file_name="Banana_Mac/Banana.app")
+# determine OS
+platform = platform.system()
+if platform == "Darwin":
+    env_path = "Banana_Mac/Banana.app"
+elif platform == "Windows":
+    env_path = "Banana_Windows_x86_64/Banana.exe"
+else:
+    print("Unknown OS. Falling back to Windows environment binaries.")
+    env_path = "Banana_Windows_x86_64/Banana.exe"
+
+# create Unity environment
+env = UnityEnvironment(file_name=env_path)
 
 # get the default brain
 brain_name = env.brain_names[0]
