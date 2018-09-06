@@ -22,7 +22,7 @@ state_size = len(state)
 
 agent = Agent(state_size=state_size, action_size=action_size, seed=0)
 
-agent.qnetwork_local.load_state_dict(torch.load('checkpoint.pth'))
+agent.qnetwork_local.load_state_dict(torch.load('checkpoints/checkpoint.pth'))
 
 env_info = env.reset(train_mode=False)[brain_name] # reset the environment
 state = env_info.vector_observations[0]            # get the current state
