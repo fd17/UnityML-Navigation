@@ -89,4 +89,8 @@ written to an output file in the `Checkpoints` folder. Training uses the followi
 With these settings, the agent should learn to solve the environment 
 within arrpoximately 500 episodes.
 
+## Observation
+This footage shows a fully trained agent acting in the environment:
+
+<img src="https://github.com/fd17/UnityML-Navigation/blob/master/solved_showcase.gif" width="480" height="270" />
 
