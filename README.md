@@ -86,7 +86,7 @@ written to an output file in the `Checkpoints` folder. Training uses the followi
 | eps_end     | 0.001    | minimum epsilon |
 |eps_decay| 0.01 | epsilon decay per episode |
 
-With default settings, the agent should learn to solve the environment 
+With these settings, the agent should learn to solve the environment 
 within arrpoximately 500 episodes.
 
 
