@@ -13,6 +13,25 @@ agent must learn to navigate a rectangular environment in order to collect fresh
 * [Matplotlib](https://matplotlib.org/) (only for plotting training scores)
 * [Jupyter](http://jupyter.org/) (only for the notebook implementation)
 
+## Installation
+Recommended way of installing the dependencies is via [Anaconda](https://www.anaconda.com/download/). To create a new Python 3.6 environment run
+
+`conda create --name myenv python=3.6`
+
+Activate the environment with
+
+`conda activate myenv`
+
+[Click here](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Installation.md) for instructions on how to install the Unity ML-Agents Toolkit.
+
+Visit [pytorch.org](https://pytorch.org/) for instructions on installing pytorch.
+
+Install matplotlib with
+
+`conda install -c conda-forge matplotlib`
+
+Jupyter should come installed with Anaconda. If not, [click here](http://jupyter.org/install) for instructions on how to install Jupyter.
+
 
 ## Getting started
 There are two ways to run the project. 
@@ -57,6 +76,7 @@ The optimization process makes use of PyTorch's implementation of Adam. The foll
 During training the agent is exposed to a maximum of 1000 steps per episode. At the end of each episode, the total
 reward is stored in an array that contains the last 100 episode rewards. When the average reward of this array reaches
 a value of 13.0, the environment is considered solved and the training terminates. The latest network parameters are then
-written to an output file in the `Checkpoints` folder.
+written to an output file in the `Checkpoints` folder. With default settings, the agent should learn to solve the environment 
+within arrpoximately 500 episodes.
 
 
