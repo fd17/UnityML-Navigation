@@ -3,10 +3,21 @@ import random
 import torch
 import numpy as np
 from collections import deque
-
+import platform
 from agents import Agent
 
-env = UnityEnvironment(file_name="Banana_Mac/Banana.app")
+platform = platform.system()
+
+if platform == "Darwin":
+    env_path = "Banana_Mac/Banana.app"
+elif platform == "Windows":
+    env_path = "Banana_Windows_x86_64/Banana.exe"
+else:
+    print("Unknown OS. Falling back to Windows environment binaries.")
+    env_path = "Banana_Windows_x86_64/Banana.exe"
+
+
+env = UnityEnvironment(file_name=env_path)
 
 # get the default brain
 brain_name = env.brain_names[0]

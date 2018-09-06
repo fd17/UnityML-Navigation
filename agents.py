@@ -14,7 +14,12 @@ TAU = 1e-3              # for soft update of target parameters
 LR = 5e-4               # learning rate 
 UPDATE_EVERY = 4        # how often to update the network
 
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+if torch.cuda.is_available():
+    print("Cuda version %s detected. Enabling GPU support." % torch.version.cuda)
+    device = torch.device("cuda:0")
+else:
+    print("Cuda not found. Falling back to CPU.")
+    device = torch.device("cpu")
 
 class Agent():
     def __init__(self, state_size, action_size, seed):
