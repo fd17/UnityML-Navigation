@@ -76,7 +76,17 @@ The optimization process makes use of PyTorch's implementation of Adam. The foll
 During training the agent is exposed to a maximum of 1000 steps per episode. At the end of each episode, the total
 reward is stored in an array that contains the last 100 episode rewards. When the average reward of this array reaches
 a value of 13.0, the environment is considered solved and the training terminates. The latest network parameters are then
-written to an output file in the `Checkpoints` folder. With default settings, the agent should learn to solve the environment 
+written to an output file in the `Checkpoints` folder. Training uses the following parameters:
+
+| parameter   | value    |  description |
+|---------|---------------|-------------|
+| n_episodes| 2000 | maximum number of episodes |
+| max_t       | 1000 | maximum steps per episode|
+| eps_start   | 0.99     | starting value for epsilon |
+| eps_end     | 0.001    | minimum epsilon |
+|eps_decay| 0.01 | epsilon decay per episode |
+
+With default settings, the agent should learn to solve the environment 
 within arrpoximately 500 episodes.
 
 
