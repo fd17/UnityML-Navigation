@@ -90,7 +90,11 @@ With these settings, the agent should learn to solve the environment
 within arrpoximately 500 episodes.
 
 ## Observation
-This footage shows a fully trained agent acting in the environment:
+The following footage shows an untrained agent:
+
+<img src="https://github.com/fd17/UnityML-Navigation/blob/master/untrained_showcase.gif" width="480" height="270" />
+
+...and the same agent again after roughly 400 episodes of training:
 
 <img src="https://github.com/fd17/UnityML-Navigation/blob/master/solved_showcase.gif" width="480" height="270" />
 
