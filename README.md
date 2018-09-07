@@ -48,9 +48,9 @@ Both ways automatically detect the current operating system (Windows or Mac) and
 for the training environment.
 
 ## Environment
-The environment is a large square world with a 37 dimensional state space. This space includes the agent's
-velocity as well as a ray-based perception of nearby objects.
-There are are four possible actions at each step:
+The environment is a large square world with a 37-dimensional state space. This space includes the agent's
+velocity as well as a ray-based perception of nearby objects. The action space is four-dimensional, corresponding to
+the four possible actions at each step:
 
 | index   | action        |
 |---------|---------------|
